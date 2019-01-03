@@ -17,7 +17,9 @@ This could also be done using the `cfg_profiler.cu` SASSI handler which will gen
 The script `process_cfg.py` accomplishes this, and expects to receive CFG file in the same format as
 `simple-cfg.dot`. Each increment value for each edge between two Basic Blocks will ensure that there are no two
 paths (from a basic block to another) that will have the same path sum. Redirect the output to `cfgs.txt`
-``` python process_cfg.py simple-cfg.dot > cfgs.txt ```
+``` 
+python process_cfg.py simple-cfg.dot > cfgs.txt 
+```
 ## 3. Run application for profiling
 Use SASSI handler `path_profiler.cu` that will parse the `cfgs.txt` and generate path sums for each path in each
 kernel and kernel invocation. This handler dumps 2 files:
