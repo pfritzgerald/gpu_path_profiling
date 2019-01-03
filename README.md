@@ -1,11 +1,11 @@
 # GPU path profiling
 
 This repository provides code  for a simple efficient path profiling on GPUs. It is inspired by Ball and Larus' paper: [Efficient
-Path Profiling] (https://dl.acm.org/citation.cfm?id=243857). Because GPU applications are not as complex as CPU
+Path Profiling](https://dl.acm.org/citation.cfm?id=243857). Because GPU applications are not as complex as CPU
 applications (fewer branches), we do not implement the step 2 in DAG profiling (see section 3 in the paper). This means that every edge
 in the control flow graph of a kernel is instrumented.
 
-This code uses [SASSI] (https://github.com/NVlabs/sassi) for instrumentation, and is therefore limited to work only with
+This code uses [SASSI](https://github.com/NVlabs/sassi) for instrumentation, and is therefore limited to work only with
 applications/OS/CUDA versions that are compatible with SASSI. 
 
 The directory "sassi_handlers" contains the SASSI instrumentation code that needs to be copied to a *SASSI* libs directory. The "scripts" directory contains the script that parses outputs.
